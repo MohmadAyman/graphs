@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <title>Ionic App</title>
@@ -10,6 +11,23 @@
   <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4e8ef7">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.css" />
+
+  <!-- Polyfill(s) for older browsers -->
+  <!--<script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+  <script src="https://unpkg.com/zone.js@0.8.4?main=browser"></script>
+  <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.5/nv.d3.min.js"></script>
+
+  <!-- 2. Configure SystemJS -->
+  <!--<script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function(err){ console.error(err); });
+  </script>-->
+
 
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
@@ -26,6 +44,7 @@
   <link href="build/main.css" rel="stylesheet">
 
 </head>
+
 <body>
 
   <!-- Ionic's root component and where the app will load -->
@@ -42,4 +61,5 @@
   <script src="build/main.js"></script>
 
 </body>
+
 </html>
