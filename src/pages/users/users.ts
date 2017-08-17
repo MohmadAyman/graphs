@@ -20,6 +20,7 @@ export class UsersPage implements OnInit {
     console.log("ionViewDidLoad UsersPage");
   }
 
+  rouiter: string = 'egts';
   options;
   data;
   chartType;
@@ -27,6 +28,7 @@ export class UsersPage implements OnInit {
   graph_x = [];
 
   ngOnInit() {
+    
     this.options = {
       chart: {
         type: "lineChart",
@@ -232,11 +234,21 @@ export class UsersPage implements OnInit {
     ];
     console.log(new Date(this.received_json.result.V[0][0]).getTime());
 
-    for (var inde = 0; inde < v.length; inde++) {
-      console.log(new Date(v[inde][0]));
-    }
+    // for (var inde = 0; inde < v.length; inde++) {
+    //   console.log(new Date(v[inde][0]));
+    // }
 
-    console.log(Number(this.received_json.result.V[0][2]));
+    var array_arry = [];
+    // construcing array of arrays from json
+    for (var index = 0; index < this.received_json.result.V.length; index++) {
+      array_arry.push([new Date(this.received_json.result.V[index][0]).getTime(), Number(this.received_json.result.V[index][2])])
+    }
+    
+    // console.log(array_arry);
+
+
+
+    // console.log(Number(this.received_json.result.V[0][2]));
     for (var index = 0; index < v.length; index++) {
       console.log(new Date(this.received_json.result.V[index][0]).getTime());
       this.graph_x.push({
